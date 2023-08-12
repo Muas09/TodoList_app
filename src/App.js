@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import React, { useState } from "react";
+import "./App.css";
 
-function App() {
+import All_component from "./components/All_component";
+import Active_component from "./components/Active_component";
+import Completed_component from "./components/Completed_component";
+import AddDetail_component from "./components/AddDetail_component";
+
+const App = () => {
+  const [activeTab, setActiveTab] = useState("all");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="container">
+        <div className="">
+          <div className="todo">#todo</div>
+
+          <div className="navigation">
+            <All_component setActiveTab={setActiveTab} activeTab={activeTab} />
+            <Active_component
+              setActiveTab={setActiveTab}
+              activeTab={activeTab}
+            />
+            <Completed_component
+              setActiveTab={setActiveTab}
+              activeTab={activeTab}
+            />
+          </div>
+          <Routes>
+            <Route
+              path="/"
+              element={<AddDetail_component activeTab={activeTab} />}
+            />
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
