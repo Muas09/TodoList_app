@@ -1,5 +1,5 @@
 import React from "react";
-import styles from './style.module.css';
+import styles from "./style.module.css";
 import { Link } from "react-router-dom";
 
 const Index = ({ setActiveTab, activeTab }) => {
@@ -9,7 +9,8 @@ const Index = ({ setActiveTab, activeTab }) => {
       className={styles.navigationCompleted}
       to="/"
       onClick={() => setActiveTab("completed")}>
-      <div className={`${styles.navigationBar} ${isActive ? styles.active : ""}`}>
+      <div
+        className={`${styles.navigationBar} ${isActive ? styles.active : ""}`}>
         <Link>Completed</Link>
       </div>
     </div>
