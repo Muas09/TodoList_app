@@ -25,11 +25,13 @@
   border-radius: 4px 4px 0px 0px;
   background: #2f80ed;
 }
-
-.navigationAll{
-  width: 100%;
-  position: relative;
-  padding: 16px 84px;
-  cursor: pointer;
+.navigationAll:hover {
+  background-color: #DFDFDF54;
 }
 
+.navigationAll {
+  width: 100%;
+  position: relative;
+  padding: 16px 91px;
+  cursor: pointer;
+}

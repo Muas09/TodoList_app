@@ -10,25 +10,30 @@
     border-radius: 4px 4px 0 0;
     transform: translateX(-50%);
   }
+  .container .navigation {
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #bdbdbd;
+    margin-bottom: 16px;
+  }
   
-  
-  .container .all-line {
+.all-line {
     padding: 2px 45px;
     border-radius: 4px 4px 0px 0px;
     background: #2f80ed;
   }
   
 
+  .navigationActive:hover {
+    background-color: #DFDFDF54;
+  }
   .navigationActive {
     width: 100%;
     position: relative;
-    padding: 16px 84px;
+    padding: 16px 79px;
     cursor: pointer;
-  }
-  
-  .navigationCompleted {
-    width: 100%;
-    position: relative;
-    padding: 16px 10.1%;
   }
   
